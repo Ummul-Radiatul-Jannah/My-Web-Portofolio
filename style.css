@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
+    padding: 5px 5%;
     background-color: #dceeff;
     box-shadow: none; 
     margin: 10;
@@ -68,6 +68,7 @@ nav a {
     color: #333;
     font-family: 'DM Serif Text', serif;
 }
+
 .hero-text p {
     margin-top: 10px;
     max-width: 600px;
@@ -88,7 +89,7 @@ nav a {
     border-radius: 50%;    
     margin: 5px;
     text-decoration: none;
-    font-size: 18px;        /* Ukuran ikon */
+    font-size: 18px;       
     transition: background-color 0.3s ease;
 }
 
@@ -146,6 +147,34 @@ nav a {
 
 .project-card.highlight {
   border: 2px solid #d3e4f0;
+}
+
+.project-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px; 
+}
+
+.project-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; 
+    flex-grow: 1;
+}
+
+.read-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #58ADFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  align-self: center;
+}
+
+.read-button:hover {
+  background-color: #58ADFF;
 }
 
 /* About */
@@ -209,7 +238,7 @@ nav a {
 .blog-card {
     background: #f0f4ff;
     padding: 20px;
-    width: 250px;
+    width: 300px;
     border-radius: 10px;
 }
 .blog-card img.blog-image {
@@ -328,6 +357,12 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
+.hero-text p,
+.hero-text ul,
+.hero-text li {
+    font-family: 'Poppins', sans-serif;
+}
+
 .about-text p {
   max-width: 600px;
   font-size: 16px;
@@ -336,12 +371,6 @@ nav a:hover {
 /* FACTS */
 .facts {
   margin: 40px 20px;
-}
-
-.facts h3 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 20px;
-  margin-bottom: 15px;
 }
 
 .facts ul {
@@ -362,6 +391,10 @@ nav a:hover {
   position: absolute;
   left: 0;
   color: #3d7eff;
+}
+
+.checklist li {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* TIMELINE */
@@ -450,6 +483,7 @@ body {
     margin-bottom: 30px;
   }
   
+  
   .skill-cards {
     display: flex;
     justify-content: center;
@@ -486,7 +520,7 @@ body {
 /* Footer */
 footer {
   background-color: #ffffff; 
-  color: #2f3336;                  
+  color: #565a5c;                  
   text-align: center;
   padding: 20px 0;
   border-top: 1px solid #8aabcd;   
@@ -548,8 +582,17 @@ footer .social-icons a:hover {
 }
 
 /* Article */
-.content {
-  flex: 3;
+
+main.container {
+  max-width: 1000px;     
+  margin: 0 auto;       
+  padding: 20px;       
+  display: block;       
+}
+
+
+.container {
+  display: block; 
 }
 
 .meta {
@@ -557,7 +600,22 @@ footer .social-icons a:hover {
   color: #555;
   margin: 10px 0 20px;
 }
+article.content img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
 
+ol li ul {
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+ol li ul li {
+  margin-bottom: 8px;
+}
 .featured-image {
   width: 150%;
   border-radius: 10px;
@@ -574,36 +632,9 @@ footer .social-icons a:hover {
   font-weight: normal;
 }
 
-/* Sidebar */
-.sidebar {
-  flex: 1;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.05);
-}
-
-.sidebar h3 {
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar li {
-  margin-bottom: 10px;
-}
-
-.sidebar a {
-  text-decoration: none;
-  color: #333;
-}
-
 /* Read Next */
 .read-next {
-  padding: 10px 5%;
+  padding: 5px 5%;
 }
 
 .read-next-header {
@@ -611,8 +642,9 @@ footer .social-icons a:hover {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  flex-wrap: nowrap; /* Cegah pindah baris */
-  gap: 16px;
+  flex-wrap: nowrap; 
+  gap: 10px;
+  width: 100%
 }
 
 .btn-explore {
@@ -630,21 +662,6 @@ footer .social-icons a:hover {
 }
 
 /* contact */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
-}
-
-nav ul li a.active {
-  font-weight: bold;
-}
 
 .contact-section {
   text-align: center;
