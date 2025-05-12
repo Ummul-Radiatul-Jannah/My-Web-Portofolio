@@ -219,7 +219,7 @@ nav a {
 
 /* Blog */
 .blogs {
-    padding: 20px 5%;
+    padding: 20px 5% 60px 5%;
     background: #fff;
 }
 
@@ -237,7 +237,7 @@ nav a {
 }
 .blog-card {
     background: #f0f4ff;
-    padding: 20px;
+    padding: 30px;
     width: 300px;
     border-radius: 10px;
 }
@@ -357,16 +357,20 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
+.hero-text h1,
+.hero-text h2,
 .hero-text p,
 .hero-text ul,
 .hero-text li {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .about-text p {
   max-width: 600px;
   font-size: 16px;
 }
+
+
 
 /* FACTS */
 .facts {
@@ -469,10 +473,16 @@ body {
 /* SKILL SECTION (UPDATED TO MATCH .projects STYLE) */
 .skills {
     text-align: center;
-    padding: 0px 5%;
+    padding: 0px 5% 60px 5%;
     background-color: #ffffff;
 }
 
+.skills h3,
+.skill-card h3,
+.skill-card p {
+  font-family: 'Poppins', sans-serif !important;
+}
+ 
 .skills h2 {
   font-family: 'DM Serif Text', serif;
 }
