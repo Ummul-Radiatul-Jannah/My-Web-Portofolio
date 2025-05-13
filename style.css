@@ -25,7 +25,7 @@ header {
     
 }
 nav a.active {
-  color: #007bff; /* warna biru sebagai tanda aktif */
+  color: #007bff; 
   border-bottom: 2px solid #007bff;
   font-weight: bold;
 }
@@ -91,12 +91,17 @@ nav a {
     text-decoration: none;
     font-size: 18px;       
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .social-icons a:hover {
-    color: #58ADFF; 
+    color: #a7cef3; 
+    transform: translateY(-2px);
 }
-
+.social-icons a:active {
+    background-color: #3c95d0;
+    transform: scale(0.95);
+}
 .hero-img img {
     width: 400px;
     border-radius: 50%;
@@ -125,26 +130,44 @@ nav a {
     width: 300px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+    cursor: pointer;
 }
 .project-card img {
     width: 100%;
     height: auto;
 }
 .btn {
-  display: inline-block;
+  display: block;
   background-color: #58ADFF;
   color: white;
   padding: 12px 20px;
   text-decoration: none;
   border-radius: 30px;
-  margin-top: 20px;  
+  margin: 20px auto 0 auto; /* tengah */
   text-align: center;
+  width: fit-content; /* supaya tidak full lebar */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
 
 .btn:hover {
   background-color: #4fa3e1; 
+  transform: translateY(-2px);
 }
 
+.btn:active {
+    background-color: #3c95d0;
+    transform: scale(0.95);
+}
 .project-card.highlight {
   border: 2px solid #d3e4f0;
 }
@@ -169,12 +192,18 @@ nav a {
   text-decoration: none;
   border-radius: 10px;
   font-size: 14px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
   align-self: center;
 }
 
 .read-button:hover {
   background-color: #58ADFF;
+  transform: translateY(-2px);
+}
+
+.read-button:active {
+  transform: scale(0.95); 
+  background-color: #3c95d0; 
 }
 
 /* About */
@@ -214,8 +243,18 @@ nav a {
     padding: 10px 16px;
     text-decoration: none;
     border-radius: 40px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+.about-text .btn:hover {
+    background-color: #4fa3e1;
+    transform: translateY(-2px);
 }
 
+.about-text .btn:active {
+    background-color: #3c95d0;
+    transform: scale(0.95);
+}
 
 /* Blog */
 .blogs {
@@ -240,11 +279,20 @@ nav a {
     padding: 30px;
     width: 300px;
     border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s; 
+    cursor: pointer;
+}
+.blog-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+}
+.blog-card:active {
+    transform: scale(0.97); /* DITAMBAHKAN */
 }
 .blog-card img.blog-image {
   width: 100%;
   height: auto;
-  border-radius: 8px; /* opsional, biar sudutnya membulat */
+  border-radius: 8px; 
   margin-bottom: 10px;
 }
 .blog-card h3 {
@@ -258,13 +306,17 @@ nav a {
     color: #007BFF;
     text-decoration: none;
 }
-
+.blog-card a:hover {
+    color: #0056b3; 
+    transform: translateY(-2px); 
+}
+.blog-card a:active {
+    transform: scale(0.95); 
+    color: #003e80; 
+}
 
 /* FONT */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap');
-
-/* RESET */
-
 
 /* CONTAINER */
 .container {
@@ -300,6 +352,85 @@ nav a {
 nav a:hover {
   color: #3d7eff;
 }
+/* RESPONSIVE SPLIT */
+@media screen and (max-width: 768px) {
+  header, .hero, .about, .projects, .blogs {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  header {
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero-img img {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .project-list,
+  .blog-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card,
+  .blog-card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about-img img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto 20px;
+  }
+
+  nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 10px 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-text h1,
+  .hero-text h3,
+  .about-text h2 {
+    font-size: 22px;
+  }
+
+  .hero-text p,
+  .about-text {
+    font-size: 14px;
+  }
+
+  .btn,
+  .read-button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
 
 /* ABOUT */
 .about {
@@ -531,7 +662,7 @@ body {
 footer {
   background-color: #ffffff; 
   color: #565a5c;                  
-  text-align: center;
+  text-align: left;
   padding: 20px 0;
   border-top: 1px solid #8aabcd;   
 }
@@ -542,11 +673,17 @@ footer .logo img {
   height: auto;   
   display: block; 
   margin: 0 auto; 
+  margin-left: 30px;
 }
 
 
 footer .social-icons {
   margin: 15px 0;
+  padding-left: 30px;
+}
+
+footer p {
+  padding-left: 40px;
 }
 
 footer .social-icons a {
@@ -562,12 +699,17 @@ footer .social-icons a {
   font-size: 18px;
   text-decoration: none;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 footer .social-icons a:hover {
-  background-color: #ffffff;
+  background-color: #aed4f8;
+  transform: translateY(-2px);
 }
-
+footer .social-icons a:active {
+    background-color: #3c95d0;
+    transform: scale(0.95);
+}
 
 .hero-content {
   text-align: center;
@@ -592,7 +734,6 @@ footer .social-icons a:hover {
 }
 
 /* Article */
-
 main.container {
   max-width: 1000px;     
   margin: 0 auto;       
@@ -669,8 +810,12 @@ ol li ul li {
 
 .btn-explore:hover {
   background-color: #333;
+  transform: translateY(-2px);
 }
-
+.btn-explore:active {
+    background-color: #3c95d0;
+    transform: scale(0.95);
+}
 /* contact */
 
 .contact-section {
@@ -757,5 +902,35 @@ ol li ul li {
   height: 24px;
   display: block;
   margin: 0;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; 
+  gap: 40px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.info-box {
+  flex: 1 1 250px; 
+  max-width: 300px;
+  min-width: 220px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .info-box {
+    flex: 1 1 100%;
+    max-width: 90%;
+    text-align: center;
+  }
 }
 
