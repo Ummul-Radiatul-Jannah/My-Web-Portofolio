@@ -73,6 +73,7 @@ nav a {
     margin-top: 10px;
     max-width: 600px;
     font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 .social-icons {
     margin-top: 20px;
@@ -144,9 +145,9 @@ nav a {
   padding: 12px 20px;
   text-decoration: none;
   border-radius: 30px;
-  margin: 20px auto 0 auto; /* tengah */
+  margin: 20px auto 0 auto; 
   text-align: center;
-  width: fit-content; /* supaya tidak full lebar */
+  width: fit-content; 
 }
 
 .project-card:hover {
@@ -501,8 +502,6 @@ nav a:hover {
   font-size: 16px;
 }
 
-
-
 /* FACTS */
 .facts {
   margin: 40px 20px;
@@ -542,7 +541,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 
 .timeline-section {
   padding: 50px 20px;
@@ -677,7 +675,8 @@ footer .logo img {
 }
 
 
-footer .social-icons {
+footer .social-
+s {
   margin: 15px 0;
   padding-left: 30px;
 }
@@ -783,6 +782,31 @@ ol li ul li {
   font-weight: normal;
 }
 
+.share-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.share-buttons p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.share-buttons a {
+  text-decoration: none;   
+  color: inherit;      
+  font-size: 24px;     
+  margin: 0 10px;
+  display: inline-flex;  
+  align-items: center;
+  justify-content: center;
+}
+
+.share-buttons i {
+  display: block;      
+}
+
 /* Read Next */
 .read-next {
   padding: 5px 5%;
@@ -860,6 +884,7 @@ ol li ul li {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-bottom: 20px;
 }
 
 .form-row {
@@ -909,7 +934,7 @@ ol li ul li {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap; 
-  gap: 40px;
+  gap: 90px;
   margin-bottom: 40px;
   text-align: left;
 }
@@ -918,7 +943,7 @@ ol li ul li {
   flex: 1 1 250px; 
   max-width: 300px;
   min-width: 220px;
-  text-align: left;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
