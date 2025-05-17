@@ -1,7 +1,9 @@
-###FEEDBACK PERTAMA###
+#FEEDBACK PERTAMA#
+
 Di tampilan artikel mengubah tombol share nya, karena tidak ada margin dan terlalu dempet
 
 ###FEEDBACK KEDUA###
+
 Di bagian contact ubah posisi antara kotak teks dan dan alamat
 
 ###FEEDBACK KETIGA###
