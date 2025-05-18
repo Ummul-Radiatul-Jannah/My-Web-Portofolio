@@ -715,7 +715,7 @@ footer {
 
 .back-to-top {
   position: absolute;
-  top: 50%;
+  top: 20%;
   right: 30px;
   transform: translateY(-50%);
 }
@@ -936,7 +936,7 @@ ol li ul li {
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .info-box {
