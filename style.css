@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 5%;
+    padding: 5px 10%;
     background-color: #dceeff;
     box-shadow: none; 
     margin: 10;
@@ -31,8 +31,11 @@ nav a.active {
 }
 
 .logo img {
-  max-width: 70%;        
-  height: auto;          
+  width: 70px;   
+  height: auto;   
+  display: block; 
+  margin: 0 auto; 
+  margin-left: -70px;          
 }
 
 
@@ -69,6 +72,7 @@ nav a {
     cursor: pointer;
     color: #007bff;
     font-size: 16px;
+    padding: 5px
 }
 
 .search-box i {
